@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>世界杯 · 简明指南与提醒</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f1ea;
+            color: #1e1e1e;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero {
+            background: #121826;
+            background-image: radial-gradient(circle at 25% 35%, #20273a 0%, #0f131c 90%);
+            padding: 3.5rem 1.5rem 4.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            background: linear-gradient(to bottom right, transparent 49.5%, #f4f1ea 50%);
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: #e9e3d5;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+        }
+
+        .hero .sub {
+            font-size: 1.15rem;
+            color: #b7ae9a;
+            max-width: 540px;
+            margin: 0 auto;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        .intro {
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
+            border-left: 4px solid #c4452c;
+            padding-left: 1.2rem;
+            color: #2d2a24;
+        }
+
+        .intro p {
+            margin-bottom: 0.6rem;
+        }
+
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem 2rem;
+            margin: 2.8rem 0 3rem;
+        }
+
+        .feature-item {
+            flex: 1 1 200px;
+            background: #ffffffd9;
+            backdrop-filter: blur(2px);
+            padding: 1.4rem 1.2rem;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0,0,0,0.02);
+            transition: box-shadow 0.2s ease;
+        }
+
+        .feature-item:hover {
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+        }
+
+        .feature-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: #c4452c;
+            letter-spacing: 0.3px;
+        }
+
+        .feature-item p {
+            font-size: 0.92rem;
+            color: #3c3934;
+            line-height: 1.55;
+        }
+
+        .scene-note {
+            background: #eae5db;
+            padding: 1.6rem 1.8rem;
+            border-radius: 20px;
+            margin: 2.8rem 0 2.4rem;
+        }
+
+        .scene-note p {
+            font-size: 0.98rem;
+            margin-bottom: 0.6rem;
+            color: #25221d;
+        }
+
+        .scene-note strong {
+            color: #a83c28;
+            font-weight: 600;
+        }
+
+        .reminder-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin: 2.2rem 0 2.8rem;
+        }
+
+        .reminder {
+            background: #ffffff;
+            padding: 1.1rem 1.4rem;
+            border-radius: 40px 16px 16px 40px;
+            border-left: 5px solid #b45f47;
+            font-size: 0.95rem;
+            color: #2e2b25;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .reminder span {
+            font-weight: 500;
+            color: #b45f47;
+            margin-right: 0.6rem;
+        }
+
+        .faq-summary {
+            margin-top: 2.2rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #d6cec0;
+        }
+
+        .faq-summary details {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        .faq-summary summary {
+            font-weight: 500;
+            cursor: pointer;
+            color: #2d2a24;
+            padding: 0.3rem 0;
+        }
+
+        .faq-summary summary::marker {
+            color: #b45f47;
+        }
+
+        .faq-summary details p {
+            padding: 0.4rem 0 0.2rem 1.2rem;
+            color: #4d4840;
+        }
+
+        .closing {
+            margin-top: 3rem;
+            padding: 1.8rem 0 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #696358;
+            border-top: 1px solid #ddd6c8;
+        }
+
+        .closing a {
+            color: #b45f47;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #b45f47;
+            transition: border 0.2s;
+        }
+
+        .closing a:hover {
+            border-bottom: 1px solid #b45f47;
+        }
+
+        a {
+            color: #b45f47;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 560px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero .sub {
+                font-size: 1rem;
+            }
+            .feature-grid {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .reminder {
+                border-radius: 16px;
+                border-left-width: 4px;
+            }
+            .container {
+                padding: 1.5rem 1rem 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <h1>世界杯 · 通往赛场的简径</h1>
+    <div class="sub">从一场比赛到一个盛夏，这里是一份安静的引路笔记。</div>
+</section>
+
+<main class="container">
+    <div class="intro">
+        <p>每四年一次，足球让世界安静下来，又让它沸腾。但在球场的灯光亮起之前，多数人需要的不只是赛程表，而是一份<b>清晰、可信的出发参照</b>——从官方信息入口到观赛前的基本准备。</p>
+        <p>这个页面不是又一篇资讯汇总，它是一扇小窗：告诉你该看向哪里，以及上路前可以留意什么。</p>
+    </div>
+
+    <div class="feature-grid">
+        <div class="feature-item">
+            <h3>⚽ 官方信息锚点</h3>
+            <p>赛事动态、参赛队伍、场馆变动，一切以 <a href="https://asia-official-fifaworldcup.com">世界杯</a> 官网公示为准。避免被非权威消息干扰。</p>
+        </div>
+        <div class="feature-item">
+            <h3>🌏 时区与日程</h3>
+            <p>比赛分布在多个时区，开球时间可能横跨凌晨或清晨。提前确认当地时间，比熬夜更从容。</p>
+        </div>
+        <div class="feature-item">
+            <h3>🎫 票务与验证</h3>
+            <p>门票转让需通过官方指定渠道，私下交易存在失效风险。每张门票均有唯一编码，建议出发前再次核对。</p>
+        </div>
+    </div>
+
+    <div class="scene-note">
+        <p><strong>一个小场景</strong> 你站在体育场外的广场上，人群穿着不同颜色的球衣，语言混杂，但指向同一个方向。手机屏幕亮着电子票的二维码，背包里放着护照复印件。没有慌张，因为你提前两周就确认了所有环节——包括从火车站到体育场的接驳车班次。</p>
+        <p>很多人以为世界杯的体验从哨声开始，其实它从你第一次打开官方页面、记下一个日期时就已展开。</p>
+    </div>
+
+    <div class="reminder-cards">
+        <div class="reminder"><span>①</span> 签证与入境政策可能随赛期调整，至少提前两个月查阅目的国移民局公告。</div>
+        <div class="reminder"><span>②</span> 住宿价格会在赛期大幅上涨，锁定可免费取消的预订，以免后续被动。</div>
+        <div class="reminder"><span>③</span> 移动网络：建议提前购买 eSIM 或当地短期数据卡，球场内公共 Wi-Fi 常超载。</div>
+    </div>
+
+    <div class="faq-summary">
+        <details>
+            <summary>在官网可以找到哪些具体信息？</summary>
+            <p>完整的赛程时间表、各场馆容量与交通指南、球队大名单、官方球迷节活动地点以及媒体认证流程。所有文件提供 PDF 下载。如果你只记一个网址，记 <a href="https://asia-official-fifaworldcup.com">世界杯</a> 就够了。</p>
+        </details>
+        <details>
+            <summary>比赛日当天需要提前多久到场？</summary>
+            <p>一般建议提前两小时。安检、找座位、购买纪念品都需要时间。热门场次周边道路会提前封闭，预留步行时间。</p>
+        </details>
+        <details>
+            <summary>非官方渠道买票有什么风险？</summary>
+            <p>最常见的情况是：门票编码被多人售卖，先到场者刷码入场，后来者被拒。官方不补办，也不受理场外交易纠纷。务必通过<a href="https://asia-official-fifaworldcup.com">世界杯</a>票务模块或授权代理购买。</p>
+        </details>
+    </div>
+
+    <div class="closing">
+        <p>赛场外没有捷径，但可以少走弯路。把<a href="https://asia-official-fifaworldcup.com">世界杯</a>当作你旅程的第一块路标，剩下的，就是享受那些将让你记住很久的瞬间。</p>
+        <p style="margin-top: 0.8rem; font-style: italic; color: #8c8477;">—— 安静准备，准时到场。</p>
+    </div>
+</main>
+
+</body>
+</html>
